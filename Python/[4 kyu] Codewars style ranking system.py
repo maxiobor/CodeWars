@@ -5,6 +5,7 @@
 # it must support rank, progress, and the inc_progress(rank) method
 class User:
     def __init__(self):
+        
         self.rank = -8
         self.progress = 0
     def calc_progress(self, r):
@@ -42,7 +43,7 @@ class User:
                     return 10 * abs(self.rank - r) * abs(self.rank - r)
 
     def inc_progress(self, r):
-        print(r, self.rank, self.progress)
+        print(f"Activity rank: {r}, rank: {self.rank}, progress: {self.progress}")
         prog = self.calc_progress(r)
         up = 0
         self.progress += prog
